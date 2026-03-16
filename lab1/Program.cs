@@ -1,8 +1,6 @@
 using RPGGame;
 
-Console.WriteLine("╔══════════════════════════════════════╗");
 Console.WriteLine("║     PATH OF EXILE - ARENA BATTLE     ║");
-Console.WriteLine("╚══════════════════════════════════════╝\n");
 
 var marauder = new Marauder("Kaom",     new Inventory<Item>());
 var witch     = new Witch("Shavronne", new Inventory<Item>());
@@ -27,9 +25,7 @@ Console.WriteLine();
 shadow.PrintStatus();
 shadow.Inventory.PrintInventory();
 
-Console.WriteLine("\n\n╔══════════════════════════════════════╗");
 Console.WriteLine("║     BATTLE 1: Marauder vs Witch      ║");
-Console.WriteLine("╚══════════════════════════════════════╝");
 SimulateBattle(marauder, witch);
 
 var marauder2 = new Marauder("Kaom II", new Inventory<Item>());
@@ -39,9 +35,7 @@ marauder2.Inventory.Add(new LifeFlask(60));
 shadow2.Inventory.Add(new PoisonFlask(9, 3));
 shadow2.Inventory.Add(new LifeFlask(35));
 
-Console.WriteLine("\n\n╔══════════════════════════════════════╗");
 Console.WriteLine("║     BATTLE 2: Shadow vs Marauder     ║");
-Console.WriteLine("╚══════════════════════════════════════╝");
 SimulateBattle(shadow2, marauder2);
 
 static void SimulateBattle(Character a, Character b, int maxTurns = 8)

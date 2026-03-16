@@ -1,29 +1,29 @@
-# Racunalne Igre - Laboratorijske Vjezbe
+# Computer Games - Laboratory Exercises
 
-Repozitorij za laboratorijske vježbe iz kolegija **Računalne igre**.
-Svaka laboratorijska vježba nalazi se u vlastitoj mapi.
-
----
-
-## Sadržaj
-
-| Mapa | Opis |
-|------|------|
-| [lab1/](lab1/) | RPG simulacija borbi inspirirana Path of Exile — OOP, inventar, efekti |
+Repository for laboratory exercises from the **Computer Games** course.
+Each laboratory exercise is located in its own folder.
 
 ---
 
-## Tehnologije
+## Contents
 
-- **Jezik:** C# (.NET 10)
+| Folder | Description |
+|--------|-------------|
+| [lab1/](lab1/) | RPG combat simulation inspired by Path of Exile — OOP, inventory, effects |
+
+---
+
+## Technologies
+
+- **Language:** C# (.NET 10)
 - **IDE:** Visual Studio 2022
-- **Platforma:** Konzolna aplikacija
+- **Platform:** Console application
 
 ---
 
-## Pokretanje pojedinih labova
+## Running individual labs
 
-Svaki lab sadrži vlastiti `README.MD` s uputama za pokretanje.
+Each lab contains its own `README.MD` with instructions for running it.
 
 ```bash
 # Lab 1

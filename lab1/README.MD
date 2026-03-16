@@ -1,24 +1,24 @@
-# Lab 1: RPG Simulacija
+# Lab 1: RPG Simulation
 
-Konzolna simulacija borbi u RPG stilu inspirirana igrom **Path of Exile**, napisana u C#.
+Console RPG-style combat simulation inspired by **Path of Exile**, written in C#.
 
-## Pokretanje
+## Running
 
 ```bash
 dotnet run
 ```
 
-## Likovi
+## Characters
 
-| Lik | HP | ATK | DEF | Posebnost |
-|-----|----|-----|-----|-----------|
+| Character | HP | ATK | DEF | Special |
+|-----------|----|-----|-----|---------|
 | **Marauder** | 160 | 22 | 10 | Endurance Charges, Fury Leap |
 | **Witch** | 80 | 36 | 2 | Fireball, Energy Shield, mana |
-| **Shadow** | 100 | 26 | 5 | Kritični udari (30%), zamke, Frenzy Charges |
+| **Shadow** | 100 | 26 | 5 | Critical strikes (30%), traps, Frenzy Charges |
 
-## Predmeti
+## Items
 
-- **LifeFlask** — obnavlja HP
-- **GraniteFlask** — povećava obranu
-- **PoisonFlask** — truje metu (šteta po potezu)
-- **RegenerationFlask** — regenerira HP po potezu
+- **LifeFlask** — restores HP
+- **GraniteFlask** — increases defense
+- **PoisonFlask** — poisons the target (damage per turn)
+- **RegenerationFlask** — regenerates HP per turn
