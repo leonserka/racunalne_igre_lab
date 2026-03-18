@@ -1,6 +1,6 @@
 using RPGGame;
 
-Console.WriteLine("║     PATH OF EXILE - ARENA BATTLE     ║");
+Console.WriteLine("||     PATH OF EXILE - ARENA BATTLE    ||");
 
 var marauder = new Marauder("Kaom",     new Inventory<Item>());
 var witch     = new Witch("Shavronne", new Inventory<Item>());
@@ -25,7 +25,7 @@ Console.WriteLine();
 shadow.PrintStatus();
 shadow.Inventory.PrintInventory();
 
-Console.WriteLine("║     BATTLE 1: Marauder vs Witch      ║");
+Console.WriteLine("||     BATTLE 1: Marauder vs Witch      ||");
 SimulateBattle(marauder, witch);
 
 var marauder2 = new Marauder("Kaom II", new Inventory<Item>());
@@ -35,7 +35,7 @@ marauder2.Inventory.Add(new LifeFlask(60));
 shadow2.Inventory.Add(new PoisonFlask(9, 3));
 shadow2.Inventory.Add(new LifeFlask(35));
 
-Console.WriteLine("║     BATTLE 2: Shadow vs Marauder     ║");
+Console.WriteLine("||     BATTLE 2: Shadow vs Marauder     ||");
 SimulateBattle(shadow2, marauder2);
 
 static void SimulateBattle(Character a, Character b, int maxTurns = 8)
@@ -67,12 +67,12 @@ static void SimulateBattle(Character a, Character b, int maxTurns = 8)
         b.PrintStatus();
     }
 
-    Console.WriteLine("\n═══════════════════════════════════════");
+    Console.WriteLine("\n=========================================");
     if (!a.IsAlive)
         Console.WriteLine($"  WINNER: {b.Name}!");
     else if (!b.IsAlive)
         Console.WriteLine($"  WINNER: {a.Name}!");
     else
         Console.WriteLine("  Battle ends in a draw.");
-    Console.WriteLine("═══════════════════════════════════════");
+    Console.WriteLine("=========================================");
 }
