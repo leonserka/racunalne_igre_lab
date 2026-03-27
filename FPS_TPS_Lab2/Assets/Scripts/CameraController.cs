@@ -24,7 +24,6 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        // Prebacivanje FPS/TPS tipkom V
         if (Input.GetKeyDown(KeyCode.V))
         {
             isFPS = !isFPS;
@@ -41,18 +40,15 @@ public class CameraController : MonoBehaviour
 
     void HandleFPS()
     {
-        // Kamera je u glavi igrača
         transform.position = cameraHolder.position;
         transform.rotation = cameraHolder.rotation;
 
-        // Oružje vidljivo u FPS
         if (weapon != null)
             weapon.SetActive(true);
     }
 
     void HandleTPS()
     {
-        // Glatko prati igrača s bočnim offsetom
         Vector3 desiredPosition = cameraHolder.position
             - cameraHolder.forward * tpsDistance
             + cameraHolder.right * shoulderOffset
@@ -70,7 +66,6 @@ public class CameraController : MonoBehaviour
             tpsSmoothSpeed * Time.deltaTime
         );
 
-        // Oružje sakrijemo u TPS
         if (weapon != null)
             weapon.SetActive(false);
     }

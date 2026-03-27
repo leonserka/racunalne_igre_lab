@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     public float minPitch = -60f;
     public float maxPitch = 60f;
 
-    // Private variables
     private CharacterController cc;
     private Vector3 velocity;
     public float currentStamina;
@@ -34,7 +33,6 @@ public class PlayerController : MonoBehaviour
     private bool isRunning = false;
     private bool isGrounded = false;
 
-    // Player states
     public enum PlayerState { Idle, Walk, Run, Crouch, Jump, Fall }
     public PlayerState currentState = PlayerState.Idle;
 
@@ -71,34 +69,27 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        // Čučanj
         if (Input.GetKeyDown(KeyCode.C))
         {
             isCrouching = !isCrouching;
             cc.height = isCrouching ? crouchHeight : standHeight;
         }
 
-        // Trčanje
         isRunning = Input.GetKey(KeyCode.LeftShift)
                     && currentStamina > 0
                     && !isCrouching;
 
-        // Odabir brzine
         float speed = isCrouching ? crouchSpeed : (isRunning ? runSpeed : walkSpeed);
 
-        // Kretanje
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         cc.Move(move * speed * Time.deltaTime);
 
-        // Provjera tla pomoću raycast
         isGrounded = Physics.Raycast(transform.position, Vector3.down,
                                       cc.height / 2f + 0.1f);
 
-        // Gravitacija
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
 
-        // Skok
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
 
