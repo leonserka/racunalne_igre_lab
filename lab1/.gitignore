@@ -1,0 +1,29 @@
+bin/
+obj/
+*.user
+.vs/
+
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln
+*.user
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Unity Asset Store
+*.unitypackage
+
+# Crash reports
+crashlytics-build.properties
