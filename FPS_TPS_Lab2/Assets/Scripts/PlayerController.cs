@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Animation")]
+    public Animator animator;
+
+    [Header("References")]
+    public Transform swatModel;
+
     [Header("Movement")]
     public float walkSpeed = 5f;
     public float runSpeed = 10f;
@@ -41,6 +47,9 @@ public class PlayerController : MonoBehaviour
         cc = GetComponent<CharacterController>();
         currentStamina = maxStamina;
 
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -51,6 +60,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleStamina();
         UpdateState();
+        UpdateAnimator();
     }
 
     void HandleMouseLook()
@@ -73,6 +83,14 @@ public class PlayerController : MonoBehaviour
         {
             isCrouching = !isCrouching;
             cc.height = isCrouching ? crouchHeight : standHeight;
+
+            if (swatModel != null)
+            {
+                float currentY = swatModel.localPosition.y;
+                swatModel.localPosition = isCrouching
+                    ? new Vector3(0, currentY + 0.4f, 0)
+                    : new Vector3(0, currentY - 0.4f, 0);
+            }
         }
 
         isRunning = Input.GetKey(KeyCode.LeftShift)
@@ -132,5 +150,18 @@ public class PlayerController : MonoBehaviour
             currentState = PlayerState.Walk;
         else
             currentState = PlayerState.Idle;
+    }
+
+    void UpdateAnimator()
+    {
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+        float speed = Mathf.Abs(moveX) + Mathf.Abs(moveZ);
+
+        animator.SetFloat("Speed", speed);
+        animator.SetBool("IsRunning", isRunning);
+        animator.SetBool("IsCrouching", isCrouching);
+        animator.SetBool("IsGrounded", isGrounded);
+        animator.SetFloat("VelocityY", velocity.y);
     }
 }
