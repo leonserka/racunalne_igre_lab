@@ -67,5 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "FPS_TPS_Lab2.slnx"
+    "dotnet.defaultSolution": "FPS_TPS_Lab2.slnx",
+    "dotnet.enableWorkspaceBasedDevelopment": false
 }
