@@ -50,6 +50,13 @@ Unity project with a player controller supporting FPS and TPS perspective switch
 
 ---
 
+## Scene
+
+- Walls, floor, and ramp have colored materials applied
+- Added a 3D character asset (visible in TPS mode)
+
+---
+
 ## Technologies
 
 - **Engine:** Unity 6 (6000.3.11f1)

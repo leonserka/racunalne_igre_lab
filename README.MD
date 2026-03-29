@@ -32,7 +32,7 @@ cd lab1
 dotnet run
 
 # Lab 2 (FPS/TPS)
-# Open the project in Unity Hub
-# Load the scene: Assets/Scenes/GameScene
-# Press Play in Unity Editor
+1. Open the project in Unity Hub
+2. Load the scene: Assets/Scenes/GameScene
+3. Press Play in Unity Editor
 ```
