@@ -27,3 +27,6 @@ Thumbs.db
 
 # Crash reports
 crashlytics-build.properties
+
+.plastic/
+ignore.conf
