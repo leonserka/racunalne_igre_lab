@@ -102,17 +102,37 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         cc.Move(move * speed * Time.deltaTime);
 
-        isGrounded = Physics.Raycast(transform.position, Vector3.down,
-                                      cc.height / 2f + 0.1f);
+        isGrounded = CheckGrounded();
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
 
         if (Input.GetButtonDown("Jump") && isGrounded && !isCrouching)
+        {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            isGrounded = false;
+
+            if (animator != null)
+                animator.CrossFadeInFixedTime("Jump", 0.02f, 0, 0f);
+        }
 
         velocity.y += gravity * Time.deltaTime;
         cc.Move(velocity * Time.deltaTime);
+
+        isGrounded = CheckGrounded();
+
+        if (isGrounded && velocity.y < 0)
+            velocity.y = -2f;
+    }
+
+    bool CheckGrounded()
+    {
+        if (cc.isGrounded)
+            return true;
+
+        float rayDistance = (cc.height * 0.5f) - cc.radius + 0.25f;
+        return Physics.SphereCast(transform.position, cc.radius * 0.9f, Vector3.down,
+                                  out _, rayDistance);
     }
 
     void HandleStamina()
