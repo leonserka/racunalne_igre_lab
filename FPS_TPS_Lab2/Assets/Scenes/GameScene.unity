@@ -2565,7 +2565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1050660627
 Transform:
   m_ObjectHideFlags: 0
@@ -4159,6 +4159,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4762918844551280760, guid: 1883b297ed2f69046bb0369984aaa8e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cd6cb35e371ee814da721ef2c4864b05, type: 2}
+    - target: {fileID: -4762918844551280760, guid: 1883b297ed2f69046bb0369984aaa8e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1d43c3140036854fbf68b732acde035, type: 2}
+    - target: {fileID: 124902065087601079, guid: 1883b297ed2f69046bb0369984aaa8e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 21b3b14567c86704e83da13ad732e8c5, type: 2}
     - target: {fileID: 919132149155446097, guid: 1883b297ed2f69046bb0369984aaa8e7, type: 3}
       propertyPath: m_Name
       value: Swat
