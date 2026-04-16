@@ -11,6 +11,7 @@ Each laboratory exercise is located in its own folder.
 |--------|-------------|
 | [lab1/](lab1/) | RPG combat simulation inspired by Path of Exile — OOP, inventory, effects |
 | [FPS_TPS_Lab2/](FPS_TPS_Lab2/) | FPS/TPS controller in Unity — player movement, stamina, camera modes |
+| [Lab3/](Lab3/) | Physics, input & collision in Unity — Rigidbody, trigger zones, coroutines, vehicle |
 
 ---
 
@@ -34,5 +35,10 @@ dotnet run
 # Lab 2 (FPS/TPS)
 1. Open the project in Unity Hub
 2. Load the scene: Assets/Scenes/GameScene
+3. Press Play in Unity Editor
+
+# Lab 3 (Physics & Collision)
+1. Open the project in Unity Hub
+2. Load the scene: Assets/Scenes/SampleScene
 3. Press Play in Unity Editor
 ```

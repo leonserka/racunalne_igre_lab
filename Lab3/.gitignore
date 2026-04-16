@@ -1,0 +1,35 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# JetBrains
+.idea/
+*.iml
+
+# Unity crash reports
+sysinfo.txt
+crashlytics-build.properties
