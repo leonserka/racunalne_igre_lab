@@ -10,7 +10,7 @@ Each laboratory exercise is located in its own folder.
 | Folder | Description |
 |--------|-------------|
 | [lab1/](lab1/) | RPG combat simulation inspired by Path of Exile — OOP, inventory, effects |
-| [FPS_TPS_Lab2/](FPS_TPS_Lab2/) | FPS/TPS controller in Unity — player movement, stamina, camera modes |
+| [FPS_TPS_Lab4/](FPS_TPS_Lab4/) | Unity animation, audio and particle effects — SWAT model, Animation Events, footsteps, landing dust, muzzle flash |
 | [Lab3/](Lab3/) | Physics, input & collision in Unity — Rigidbody, trigger zones, coroutines, vehicle |
 
 ---
@@ -19,7 +19,7 @@ Each laboratory exercise is located in its own folder.
 
 - **Language:** C# (.NET 10)
 - **IDE:** Visual Studio 2022
-- **Unity:** Unity 6 (6000.3.11f1)
+- **Unity:** Unity 6 (6000.4.0f1)
 - **Platform:** Console application / Unity Engine
 
 ---
@@ -32,7 +32,7 @@ Each lab contains its own `README.MD` with instructions for running it.
 cd lab1
 dotnet run
 
-# Lab 2 (FPS/TPS)
+# Lab 4 (Animation, Audio & Particles)
 1. Open the project in Unity Hub
 2. Load the scene: Assets/Scenes/GameScene
 3. Press Play in Unity Editor
