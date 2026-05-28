@@ -10,8 +10,9 @@ Each laboratory exercise is located in its own folder.
 | Folder | Description |
 |--------|-------------|
 | [lab1/](lab1/) | RPG combat simulation inspired by Path of Exile — OOP, inventory, effects |
-| [FPS_TPS_Lab4/](FPS_TPS_Lab4/) | Unity animation, audio and particle effects — SWAT model, Animation Events, footsteps, landing dust, muzzle flash |
+| [FPS_TPS_Lab2/](FPS_TPS_Lab2/) | FPS/TPS controller in Unity — player movement, stamina, camera modes |
 | [Lab3/](Lab3/) | Physics, input & collision in Unity — Rigidbody, trigger zones, coroutines, vehicle |
+| [FPS_TPS_Lab4/](FPS_TPS_Lab4/) | Unity animation, audio and particle effects — SWAT model, Animation Events, footsteps, landing dust, muzzle flash |
 
 ---
 
